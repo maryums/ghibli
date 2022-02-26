@@ -20,7 +20,7 @@ async function getFilms() {
 
 const autoCompleteJS = new autoComplete({
 
-    placeHolder: "Search for Films...",
+    placeHolder: "Staring Typing...",
     data: {
         src: async () => {
             try {

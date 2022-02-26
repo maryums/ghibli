@@ -1,5 +1,3 @@
-
-
 const input = document.querySelector('input');
 const form = document.querySelector('form')
 const results = document.querySelector('.results');
@@ -20,26 +18,14 @@ async function getFilms() {
     }
 }
 
-
 const autoCompleteJS = new autoComplete({
 
     placeHolder: "Search for Films...",
     data: {
         src: async () => {
             try {
-                // Loading placeholder text
-                document
-                    .getElementById("autoComplete")
-                    .setAttribute("placeholder", "Loading...");
-
                 let res = await fetch('https://ghibliapi.herokuapp.com/films/');
                 const data = await res.json();
-
-                // Post Loading placeholder text
-                document
-                    .getElementById("autoComplete")
-                    .setAttribute("placeholder", autoCompleteJS.placeHolder);
-
                 return data;
             } catch (error) {
                 return error;
@@ -53,11 +39,6 @@ const autoCompleteJS = new autoComplete({
         highlight: {
             render: true
         }
-    },
-    resultsList: {
-        noResults: true,
-        maxResults: 15,
-        tabSelect: true
     }
 })
 
@@ -73,9 +54,6 @@ autoCompleteJS.input.addEventListener("selection", function (event) {
     console.log(feedback);
 });
 
-
-
-
 async function renderFilms() {
     let films = await getFilms();
     let html = '';
@@ -87,7 +65,7 @@ async function renderFilms() {
         films.forEach(film => {
             if (searchTerm.toLowerCase() === film.title.toLowerCase()) {
                 let htmlSegment =
-                    `<div class="card my-4 mx-4">
+                    `<div class="card my-4 mx-4" style="width: 25rem;">
                     <img src="${film.image}" card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">${film.title} /  ${film.release_date}  </h5>

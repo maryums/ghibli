@@ -14,3 +14,7 @@ body {
     justify-content: center;
     word-wrap: wrap;
 }
+
+img {
+    width: 100%;
+}

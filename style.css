@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 body {
-    background-image: url(3a3c564aa715450a4b4448eed8df3963.jpeg); 
+    background: url(bg.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #CAF0F8;
-
     font-family: 'Inter', sans-serif;
 }
  h1 {

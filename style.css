@@ -3,7 +3,7 @@
 body {
     background-image: url(3a3c564aa715450a4b4448eed8df3963.jpeg); 
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
     background-color: #CAF0F8;
 
     font-family: 'Inter', sans-serif;

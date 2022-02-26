@@ -72,7 +72,6 @@ async function renderFilms() {
                             <h6 class="card-subtitle mb-2 text-muted">Original Title: ${film.original_title} </h6>
                             <h6 class="card-subtitle mb-2 text-muted">Directed by: ${film.director} </h6>
                             <p class="card-text"> ${film.description} </p>
-                            
                         </div>
                     </div>`;
 
